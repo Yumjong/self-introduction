@@ -1,6 +1,13 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
   margin: 0;
-  box-sizing: border-box;
+}
+
+ul {
+  padding-left: 0;
 }
 
 li {
@@ -21,6 +28,10 @@ button {
   color: white;
 }
 
+::-webkit-scrollbar {
+  display: none;
+}
+
 /* navbar */
 
 #navbar {
@@ -30,6 +41,13 @@ button {
   background-color: rgb(58, 54, 54);
   padding: 16px;
   font-size: 20px;
+  position: fixed;
+  width: 100vw;
+  z-index: 1;
+}
+
+#navbar.navbar--dark {
+  opacity: 0.8;
 }
 
 .navbar_icon {
@@ -38,13 +56,14 @@ button {
 
 .navbar_menu {
   display: flex;
+  align-items: center;
 }
 
 .navbar_menu_item {
-  margin-left: 10px;
   color: white;
   padding: 10px;
   border-radius: 4px;
+  margin: 0 4px;
 }
 
 .navbar_menu_item:hover {
